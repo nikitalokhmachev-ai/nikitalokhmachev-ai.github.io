@@ -6,6 +6,11 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
+import cv from "./computer-vision.png";
+import ds from "./data-science.png";
+import aiengineer from "./ai-engineer.png";
+import airesearcher from "./ai-researcher.png";
+
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
@@ -20,14 +25,15 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
-
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+
+import craftwork from "./company/craftwork.png";
+import unt from "./company/unt.png";
+import kryptonite from "./company/kryptonite.png";
+import bluerivertech from "./company/bluerivertech.png";
+import continental from "./company/continental.png";
 
 export {
 	backend,
@@ -50,11 +56,16 @@ export {
 	tailwind,
 	typescript,
 	threejs,
-	meta,
-	shopify,
-	starbucks,
-	tesla,
 	carrent,
 	jobit,
 	tripguide,
+	craftwork,
+	unt,
+	kryptonite,
+	bluerivertech,
+	continental,
+	cv,
+	ds,
+	aiengineer,
+	airesearcher,
 };

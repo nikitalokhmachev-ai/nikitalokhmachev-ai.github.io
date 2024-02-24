@@ -20,7 +20,7 @@ const ExperienceCard = ({ experience }) => (
 		}
 	>
 		<div>
-			<h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+			<h3 className="text-[#27253A] text-[24px] font-bold">{experience.title}</h3>
 			<p className="text-secondary text-[16px] font-semibold" style={{ margin: 0 }}>
 				{experience.company_name}
 			</p>
@@ -40,7 +40,7 @@ const Experience = () => {
 		<>
 			<motion.div variants={textVariant()}>
 				<p className={styles.sectionSubText}>What I have done so far</p>
-				<h2 className={styles.sectionHeadText}>Work Experience.</h2>
+				<h2 className={styles.sectionHeadText}>Relevant Work Experience.</h2>
 			</motion.div>
 
 			<div className="mt-20 flex flex-col">
