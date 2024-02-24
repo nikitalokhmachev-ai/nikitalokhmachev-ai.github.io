@@ -18,7 +18,7 @@ const Navbar = () => {
 						window.scrollTo(0, 0);
 					}}
 				>
-					<p className="text-white text-[18px] font-bold cursor-pointer">
+					<p className="text-[#27253A] text-[18px] font-bold cursor-pointer">
 						Nik<span className="sm:block hidden">| Nikita Lokhmachev</span>
 					</p>
 				</Link>
@@ -44,7 +44,7 @@ const Navbar = () => {
 					/>
 
 					<div
-						className={`${!toggle ? "hidden" : "flex"} p-6 black-gradient absolute
+						className={`${!toggle ? "hidden" : "flex"} p-6 bg-[#27253a] absolute
             top-20 right-0 mx-4 my-2 mim-w-[140px]
             z-10 rounded-xl`}
 					>

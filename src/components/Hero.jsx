@@ -8,10 +8,11 @@ const Hero = () => {
 				<div className="flex flex-col justify-center items-center mt-5"></div>
 
 				<div>
-					<h1 className={`${styles.heroHeadText} text-white`}>
+					<h1 className={`${styles.heroHeadText} text-black`}>
 						Hi, I'm <span className={styles.nameColor}>Nikita</span>
 					</h1>
 					<p className={`${styles.heroSubText} mt-2 text-white-100`}>I develop AI for Computer Vision and NLP.</p>
+					<p className={`${styles.heroSmallText}`}>Most of my work consists of building, applying, and maintaining neural networks like this:</p>
 				</div>
 			</div>
 			<ComputersCanvas />

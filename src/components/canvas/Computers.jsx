@@ -9,8 +9,13 @@ const Computers = ({ isMobile }) => {
 		<mesh>
 			<hemisphereLight intensity={0.15} groundColor="black" />
 			<pointLight intensity={1} />
-			<spotLight position={[-20, 50, 10]} angle={0.12} penumbra={1} intensity={1} />
-			<primitive object={computer.scene} scale={isMobile ? 0.5 : 0.7} position={isMobile ? [0, -3, -1.5] : [0, -3.25, -0.5]} rotation={[-0.01, -0.2, -0.1]} />
+			<spotLight position={[-20, 50, 20]} angle={0.12} penumbra={1} intensity={4} />
+			<primitive
+				object={computer.scene}
+				scale={isMobile ? 0.5 : 0.65}
+				position={isMobile ? [0, -3, -1.5] : [0, -3.5, -0.5]}
+				rotation={[0, Math.PI / 2 - 0.2, -0]}
+			/>
 		</mesh>
 	);
 };
