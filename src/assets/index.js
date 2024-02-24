@@ -29,6 +29,10 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import lineart from "./lineart.png";
+import idao from "./idao.png";
+import radio from "./radio.png";
+
 import craftwork from "./company/craftwork.png";
 import unt from "./company/unt.png";
 import kryptonite from "./company/kryptonite.png";
@@ -68,4 +72,7 @@ export {
 	ds,
 	aiengineer,
 	airesearcher,
+	lineart,
+	idao,
+	radio,
 };

@@ -24,7 +24,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 
 				<div className="mt-5">
 					<h3 className="text-white font-bold text-[24px]">{name}</h3>
-					<p className="mt-2 text-secondary text-[14px]">{description}</p>
+					<p className="mt-2 text-[#27253A] text-[14px]">{description}</p>
 				</div>
 
 				<div className="mt-4 flex flex-wrap gap-2">
@@ -44,14 +44,10 @@ const Works = () => {
 		<>
 			<motion.div variants={textVariant()}>
 				<p className={styles.sectionSubText}>My Work</p>
-				<h2 className={styles.sectionHeadText}>Projects.</h2>
+				<h2 className={styles.sectionHeadText}>
+					<i>Some</i> of the many projects I did for fun.
+				</h2>
 			</motion.div>
-
-			<div className="w-full flex">
-				<motion.p variants={fadeIn("", "", 0.1, 1)} className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
-					Following projects showcase my experience.
-				</motion.p>
-			</div>
 
 			<div className="mt-20 flex flex-wrap gap-7">
 				{projects.map((project, index) => (

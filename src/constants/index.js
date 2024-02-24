@@ -24,6 +24,9 @@ import {
 	kryptonite,
 	bluerivertech,
 	continental,
+	idao,
+	radio,
+	lineart,
 } from "../assets";
 
 export const navLinks = [
@@ -82,32 +85,12 @@ const technologies = [
 		icon: reactjs,
 	},
 	{
-		name: "Redux Toolkit",
-		icon: redux,
-	},
-	{
-		name: "Tailwind CSS",
-		icon: tailwind,
-	},
-	{
-		name: "Node JS",
-		icon: nodejs,
-	},
-	{
-		name: "MongoDB",
-		icon: mongodb,
-	},
-	{
 		name: "Three JS",
 		icon: threejs,
 	},
 	{
 		name: "git",
 		icon: git,
-	},
-	{
-		name: "figma",
-		icon: figma,
 	},
 	{
 		name: "docker",
@@ -179,94 +162,70 @@ const experiences = [
 	},
 ];
 
-const testimonials = [
-	{
-		testimonial: "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-		name: "Sara Lee",
-		designation: "CFO",
-		company: "Acme Co",
-		image: "https://randomuser.me/api/portraits/women/4.jpg",
-	},
-	{
-		testimonial: "I've never met a web developer who truly cares about their clients' success like Rick does.",
-		name: "Chris Brown",
-		designation: "COO",
-		company: "DEF Corp",
-		image: "https://randomuser.me/api/portraits/men/5.jpg",
-	},
-	{
-		testimonial: "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-		name: "Lisa Wang",
-		designation: "CTO",
-		company: "456 Enterprises",
-		image: "https://randomuser.me/api/portraits/women/6.jpg",
-	},
-];
-
 const projects = [
 	{
-		name: "Car Rent",
+		name: "IDAO: Satellite Position and Velocity Prediction (2020)",
 		description:
-			"Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+			"This is an implementation of one of the winning solutions for the satellite position and velocity prediction system for International Data Analysis Olympiad.",
 		tags: [
 			{
-				name: "react",
+				name: "data-science",
 				color: "blue-text-gradient",
 			},
 			{
-				name: "mongodb",
+				name: "visualization",
 				color: "green-text-gradient",
 			},
 			{
-				name: "tailwind",
+				name: "machine-learning",
 				color: "pink-text-gradient",
 			},
 		],
-		image: carrent,
-		source_code_link: "https://github.com/",
+		image: idao,
+		source_code_link: "https://github.com/Oxonomy/IDAO-2020",
 	},
 	{
-		name: "Job IT",
+		name: "Line Art Colorization (2021)",
 		description:
-			"Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+			"This is a web app that allows users to upload a line art image and generate a colorized image with the help of an AI model. The model implementation is based on the User-Guided Deep Anime Line Art Colorization but is optimized and trained on a different dataset.",
 		tags: [
 			{
-				name: "react",
+				name: "generative-ai",
 				color: "blue-text-gradient",
 			},
 			{
-				name: "restapi",
+				name: "pytorch",
 				color: "green-text-gradient",
 			},
 			{
-				name: "scss",
+				name: "gradio",
 				color: "pink-text-gradient",
 			},
 		],
-		image: jobit,
-		source_code_link: "https://github.com/",
+		image: lineart,
+		source_code_link: "https://github.com/nikitalokhmachev-ai/line-art-colorization",
 	},
 	{
-		name: "Trip Guide",
+		name: "IEEE Paper Publication (2023)",
 		description:
-			"A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+			"We published and presented this paper at the flagship IEEE PIMRC conference. Radio Map Estimation is the task of predicting radio power at all locations in a two-dimensional area given a set of known signal locations, which is important for power control, user-cell association, and many other tasks.",
 		tags: [
 			{
-				name: "nextjs",
+				name: "autoencoders",
 				color: "blue-text-gradient",
 			},
 			{
-				name: "supabase",
+				name: "resnets",
 				color: "green-text-gradient",
 			},
 			{
-				name: "css",
+				name: "diffusion",
 				color: "pink-text-gradient",
 			},
 		],
-		image: tripguide,
-		source_code_link: "https://github.com/",
+		image: radio,
+		source_code_link: "https://github.com/nikitalokhmachev-ai/radio-map-estimation-public",
 	},
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };
