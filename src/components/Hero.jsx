@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
+import { NeuralNetCanvas } from "./canvas";
 const Hero = () => {
 	return (
 		<section className="relative w-full h-screen mx-auto">
@@ -15,7 +15,7 @@ const Hero = () => {
 					<p className={`${styles.heroSmallText}`}>Most of my work consists of building, applying, and maintaining neural networks like this:</p>
 				</div>
 			</div>
-			<ComputersCanvas />
+			<NeuralNetCanvas />
 
 			<div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
 				<a href="#about">

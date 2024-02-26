@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
-const Computers = ({ isMobile }) => {
+const NeuralNet = ({ isMobile }) => {
 	const computer = useGLTF("./neural_network/scene.gltf");
 	return (
 		<mesh>
@@ -20,7 +20,7 @@ const Computers = ({ isMobile }) => {
 	);
 };
 
-const ComputersCanvas = () => {
+const NeuralNetCanvas = () => {
 	const [isMobile, setIsMobile] = useState(false);
 
 	useEffect(() => {
@@ -43,11 +43,11 @@ const ComputersCanvas = () => {
 		<Canvas frameloop="demand" shadows camera={{ position: [20, 3, 5], fov: 50 }} gl={{ preserveDrawingBuffer: true }}>
 			<Suspense fallback={<CanvasLoader />}>
 				<OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} minPolarAngle={Math.PI / 2} />
-				<Computers />
+				<NeuralNet />
 			</Suspense>
 			<Preload all />
 		</Canvas>
 	);
 };
 
-export default ComputersCanvas;
+export default NeuralNetCanvas;
