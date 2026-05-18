@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <path d="M 50 15 A 35 35 0 0 0 15 50 L 50 50 Z" fill="#BFC2FF" transform="translate(0, -2)" />
+  <path d="M 50 85 A 35 35 0 0 0 85 50 L 50 50 Z" fill="#BFC2FF" transform="translate(0, 2)" />
+  <rect x="75" y="15" width="8" height="8" fill="#BFC2FF" />
+  <line x1="50" y1="10" x2="50" y2="90" stroke="#e5e2e1" stroke-width="2" />
+</svg>

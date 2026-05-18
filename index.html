@@ -1,15 +1,1045 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link rel="icon" href="/assets/ai-engineer-a717ca8c.png" type="image/x-icon" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Nik | Portfolio</title>
-		<script type="module" crossorigin src="/assets/index-841e1e45.js"></script>
-		<link rel="stylesheet" href="/assets/index-ca6c9f91.css">
-	</head>
-	<body>
-		<div id="root"></div>
-		
-	</body>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#131313" />
+    <meta name="color-scheme" content="dark" />
+
+    <title>Nikita Lokhmachev · AI / ML Engineer · Multi-Agent Systems &amp; Computer Vision</title>
+    <meta name="description" content="AI/ML engineer with 6+ years across production computer vision, LLM and RAG systems, multi-agent orchestration, and security-focused developer tools. Open-source contributor to Greywall (184★), co-founder at Converge Labs, IEEE PIMRC 2023 author." />
+    <meta name="keywords" content="AI engineer, ML engineer, machine learning, computer vision, LLM, RAG, LangChain, multi-agent, agentic AI, AI sandbox, Greywall, Packrat, Clockout, Converge Labs, PyTorch, TensorFlow, IEEE PIMRC, Fulbright, Hugging Face, vector search, Grounding DINO, Segment Anything, StyleGAN2" />
+    <meta name="author" content="Nikita Lokhmachev" />
+    <link rel="canonical" href="https://nikitalokhmachev-ai.github.io/" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="apple-touch-icon" href="favicon.svg" />
+    <link rel="mask-icon" href="favicon.svg" color="#bfc2ff" />
+    <link rel="shortcut icon" href="favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Nikita Lokhmachev" />
+    <meta property="og:title" content="Nikita Lokhmachev · AI / ML Engineer" />
+    <meta property="og:description" content="Multi-agent systems, agentic AI infra, computer vision, open-source contributor (Greywall 184★, Packrat). Published at IEEE PIMRC 2023. Available for senior IC, staff, and founding-engineer roles." />
+    <meta property="og:url" content="https://nikitalokhmachev-ai.github.io/" />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/40176838?v=4" />
+    <meta property="profile:first_name" content="Nikita" />
+    <meta property="profile:last_name" content="Lokhmachev" />
+    <meta property="profile:username" content="nikitalokhmachev-ai" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nikita Lokhmachev · AI / ML Engineer" />
+    <meta name="twitter:description" content="Multi-agent systems, agentic AI infra, computer vision. Open-source contributor (Greywall 184★). IEEE PIMRC 2023." />
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/40176838?v=4" />
+
+    <!-- AI crawlers -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="GPTBot" content="index, follow" />
+    <meta name="ClaudeBot" content="index, follow" />
+    <meta name="PerplexityBot" content="index, follow" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Hanken+Grotesk:wght@300;400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Hanken+Grotesk:wght@300;400;500;600;700&amp;display=swap" />
+
+    <!-- Tailwind via CDN. For production, swap to a pre-built CSS bundle. -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              surface: '#131313',
+              'surface-container-lowest': '#0e0e0e',
+              'surface-container-low': '#1c1b1b',
+              'surface-container': '#201f1f',
+              'surface-container-high': '#2a2a2a',
+              'surface-container-highest': '#353534',
+              'surface-bright': '#393939',
+              'on-surface': '#e5e2e1',
+              'on-surface-variant': '#c6c4da',
+              outline: '#8f8fa3',
+              'outline-variant': '#454557',
+              primary: '#bfc2ff',
+              'on-primary': '#0400ac',
+              'primary-container': '#2d32ff',
+              secondary: '#ffffff',
+              'secondary-container': '#c3f400',
+              tertiary: '#ffb4a2',
+              'tertiary-container': '#ab2600',
+            },
+            spacing: {
+              'margin-mobile': '24px',
+              'margin-desktop': '80px',
+              'section-gap': '160px',
+              gutter: '32px',
+            },
+            fontFamily: {
+              display: ['Syne', 'system-ui', 'sans-serif'],
+              body: ['Hanken Grotesk', 'system-ui', 'sans-serif'],
+              mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+            },
+            fontSize: {
+              'display-xl': ['clamp(3rem, 9vw, 7.5rem)', { lineHeight: '0.92', letterSpacing: '-0.04em', fontWeight: '800' }],
+              'display-lg': ['clamp(2.5rem, 6vw, 5rem)', { lineHeight: '0.95', letterSpacing: '-0.03em', fontWeight: '800' }],
+              'headline-lg': ['clamp(2rem, 4.5vw, 4rem)', { lineHeight: '1.05', letterSpacing: '-0.02em', fontWeight: '700' }],
+              'headline-md': ['clamp(1.5rem, 3vw, 2.5rem)', { lineHeight: '1.1', letterSpacing: '-0.01em', fontWeight: '700' }],
+              'body-lg': ['1.25rem', { lineHeight: '1.6', fontWeight: '400' }],
+              'body-md': ['1rem', { lineHeight: '1.5', fontWeight: '400' }],
+              caps: ['0.75rem', { lineHeight: '1.4', letterSpacing: '0.1em', fontWeight: '500' }],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body { background: #131313; color: #e5e2e1; font-family: 'Hanken Grotesk', system-ui, sans-serif; }
+      ::selection { background: #bfc2ff; color: #0400ac; }
+      *:focus-visible { outline: 2px solid #c3f400; outline-offset: 4px; border-radius: 2px; }
+
+      /* Pattern-break offset shadow */
+      .offset-primary { box-shadow: 12px 12px 0 0 #bfc2ff; transition: transform .35s ease, box-shadow .35s ease; }
+      .offset-primary:hover { transform: translate(-4px, -4px); box-shadow: 16px 16px 0 0 #bfc2ff; }
+      .offset-secondary { box-shadow: 12px 12px 0 0 #c3f400; transition: transform .35s ease, box-shadow .35s ease; }
+      .offset-secondary:hover { transform: translate(-4px, -4px); box-shadow: 16px 16px 0 0 #c3f400; }
+
+      /* Leaf-shape asymmetric radius */
+      .leaf { border-radius: 0 1.5rem 0 1.5rem; }
+      .leaf-r { border-radius: 1.5rem 0 1.5rem 0; }
+
+      /* Liquid CTA */
+      .liquid { transition: transform .35s cubic-bezier(.34, 1.56, .64, 1), border-radius .35s ease, background .35s ease; }
+      .liquid:hover { transform: scale(1.05) skewX(-3deg); }
+      .liquid:active { transform: scale(.98) skewX(3deg); }
+
+      /* Marquee for impact metrics ribbon */
+      @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+      .marquee-track { animation: marquee 6s linear infinite; }
+      @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+
+      /* Grid-break diagonal section divider */
+      .diagonal-divider { clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 96%); }
+
+      /* Underline link motion */
+      .link-stitch { position: relative; }
+      .link-stitch::after { content: ''; position: absolute; left: 0; right: 0; bottom: -4px; height: 2px; background: currentColor; transform: scaleX(.4); transform-origin: left; transition: transform .35s ease; }
+      .link-stitch:hover::after { transform: scaleX(1); }
+
+      /* Skip link */
+      .skip-link { position: absolute; left: -9999px; top: 0; z-index: 100; background: #c3f400; color: #131313; padding: 0.5rem 1rem; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; letter-spacing: 0.1em; }
+      .skip-link:focus { left: 1rem; top: 1rem; }
+
+      /* ===== Background atmosphere ===== */
+
+      /* Site-wide ambient drifting geometric shapes */
+      .ambient-shapes {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+        mask-image: radial-gradient(ellipse at center, #000 30%, transparent 90%);
+        -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 90%);
+      }
+      .ambient-shapes .shape {
+        position: absolute;
+        border: 1px solid rgba(191, 194, 255, 0.14);
+        will-change: transform;
+      }
+      .ambient-shapes .shape.leaf-shape  { border-radius: 0 1.5rem 0 1.5rem; }
+      .ambient-shapes .shape.leaf-shape-r { border-radius: 1.5rem 0 1.5rem 0; }
+      .ambient-shapes .shape.circle     { border-radius: 50%; }
+      .ambient-shapes .shape.square     { border-radius: 0; }
+      .ambient-shapes .shape.neon       { border-color: rgba(195, 244, 0, 0.18); }
+      .ambient-shapes .shape.peach      { border-color: rgba(255, 180, 162, 0.16); }
+
+      .ambient-shapes .s1 { width: 320px; height: 320px; top: 8%;  left: -4%;  animation: float1 11s ease-in-out infinite alternate; }
+      .ambient-shapes .s2 { width: 72px;  height: 72px;  top: 14%; right: 12%; animation: float2 7s  ease-in-out infinite alternate; transform: rotate(18deg); }
+      .ambient-shapes .s3 { width: 200px; height: 200px; top: 42%; right: -3%; animation: float3 13s ease-in-out infinite alternate; }
+      .ambient-shapes .s4 { width: 380px; height: 380px; top: 58%; left: 18%;  animation: float4 12s ease-in-out infinite alternate; }
+      .ambient-shapes .s5 { width: 110px; height: 110px; top: 78%; right: 24%; animation: float5 9s  ease-in-out infinite alternate; transform: rotate(-12deg); }
+      .ambient-shapes .s6 { width: 56px;  height: 56px;  top: 32%; left: 38%;  animation: float6 6s  ease-in-out infinite alternate; }
+      .ambient-shapes .s7 { width: 260px; height: 260px; top: 92%; left: 4%;   animation: float7 14s ease-in-out infinite alternate; }
+      .ambient-shapes .s8 { width: 90px;  height: 90px;  top: 24%; left: 62%;  animation: float8 10s ease-in-out infinite alternate; }
+
+      @keyframes float1 { from { transform: translate(0, 0) rotate(0deg); }    to { transform: translate(36px, -24px) rotate(8deg); } }
+      @keyframes float2 { from { transform: translate(0, 0) rotate(18deg); }   to { transform: translate(-32px, 48px) rotate(-6deg); } }
+      @keyframes float3 { from { transform: translate(0, 0) scale(1); }        to { transform: translate(48px, 32px) scale(1.06); } }
+      @keyframes float4 { from { transform: translate(0, 0) rotate(0deg); }    to { transform: translate(-28px, -42px) rotate(-5deg); } }
+      @keyframes float5 { from { transform: translate(0, 0) rotate(-12deg); }  to { transform: translate(28px, -28px) rotate(8deg); } }
+      @keyframes float6 { from { transform: translate(0, 0) rotate(0deg); }    to { transform: translate(-40px, 40px) rotate(45deg); } }
+      @keyframes float7 { from { transform: translate(0, 0) scale(1); }        to { transform: translate(40px, -30px) scale(1.04); } }
+      @keyframes float8 { from { transform: translate(0, 0) rotate(0deg); }    to { transform: translate(22px, 36px) rotate(-30deg); } }
+
+      /* Hero mesh blobs */
+      .mesh-blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(90px);
+        pointer-events: none;
+        z-index: 0;
+        will-change: transform;
+      }
+      .mesh-blob.b1 {
+        width: 620px; height: 620px;
+        background: radial-gradient(circle, #bfc2ff 0%, transparent 65%);
+        top: -8%; left: -12%;
+        opacity: 0.45;
+        animation: drift1 28s ease-in-out infinite alternate;
+      }
+      .mesh-blob.b2 {
+        width: 520px; height: 520px;
+        background: radial-gradient(circle, #2d32ff 0%, transparent 65%);
+        top: 18%; right: -10%;
+        opacity: 0.55;
+        animation: drift2 36s ease-in-out infinite alternate;
+      }
+      .mesh-blob.b3 {
+        width: 380px; height: 380px;
+        background: radial-gradient(circle, #c3f400 0%, transparent 65%);
+        bottom: -16%; left: 32%;
+        opacity: 0.15;
+        animation: drift3 44s ease-in-out infinite alternate;
+      }
+      @keyframes drift1 {
+        from { transform: translate(0, 0) scale(1); }
+        to   { transform: translate(22%, 18%) scale(1.15); }
+      }
+      @keyframes drift2 {
+        from { transform: translate(0, 0) scale(1); }
+        to   { transform: translate(-18%, -12%) scale(0.88); }
+      }
+      @keyframes drift3 {
+        from { transform: translate(0, 0) scale(1); }
+        to   { transform: translate(12%, -22%) scale(1.2); }
+      }
+
+      /* SVG neural-net constellation lines */
+      .constellation {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.4;
+      }
+      .constellation line {
+        stroke: #bfc2ff;
+        stroke-width: 0.5;
+        opacity: 0.5;
+        animation: pulseLine 6s ease-in-out infinite;
+      }
+      .constellation circle {
+        fill: #c3f400;
+        animation: pulseNode 4s ease-in-out infinite;
+      }
+      .constellation .n2 { fill: #bfc2ff; animation-delay: 0.7s; }
+      .constellation .n3 { fill: #ffb4a2; animation-delay: 1.4s; }
+      .constellation .n4 { fill: #bfc2ff; animation-delay: 2.1s; }
+      .constellation .n5 { fill: #c3f400; animation-delay: 2.8s; }
+      .constellation .n6 { fill: #bfc2ff; animation-delay: 3.5s; }
+      .constellation .l2 { animation-delay: 1s; }
+      .constellation .l3 { animation-delay: 2s; }
+      .constellation .l4 { animation-delay: 3s; }
+      .constellation .l5 { animation-delay: 4s; }
+      @keyframes pulseNode {
+        0%, 100% { opacity: 0.35; r: 2; }
+        50%      { opacity: 1;    r: 4; }
+      }
+      @keyframes pulseLine {
+        0%, 100% { opacity: 0.15; }
+        50%      { opacity: 0.55; }
+      }
+
+      /* Make sure content sits above the atmosphere */
+      header, main, footer { position: relative; z-index: 1; }
+      .hero-content { position: relative; z-index: 2; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .ambient-shapes .shape, .mesh-blob, .constellation line, .constellation circle, .marquee-track {
+          animation: none !important;
+        }
+      }
+    </style>
+
+    <!-- JSON-LD Person schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nikita Lokhmachev",
+      "alternateName": "Nik",
+      "url": "https://nikitalokhmachev-ai.github.io/",
+      "image": "https://avatars.githubusercontent.com/u/40176838?v=4",
+      "jobTitle": "AI / ML Engineer",
+      "description": "AI/ML engineer specializing in multi-agent systems, agentic AI infrastructure, computer vision, LLM and RAG systems, and security-focused developer tools. Open-source contributor to Greywall (184★) and Packrat. Co-founder at Converge Labs. Published at IEEE PIMRC 2023.",
+      "email": "mailto:lokhmachevnikita@gmail.com",
+      "telephone": "+1-940-594-3268",
+      "sameAs": [
+        "https://github.com/nikitalokhmachev-ai",
+        "https://www.linkedin.com/in/nikitalokhmachev-ai"
+      ],
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "University of North Texas", "sameAs": "https://www.unt.edu/" },
+        { "@type": "CollegeOrUniversity", "name": "Bauman Moscow State Technical University", "sameAs": "https://bmstu.ru/" }
+      ],
+      "award": [
+        "IEEE PIMRC 2023 Publication: Radio Map Estimation with Deep Dual Path Autoencoders and Skip Connection Learning",
+        "Edmund S. Muskie Professional Fellowship, Cultural Vistas (2022)",
+        "Fulbright Foreign Student Scholarship, Institute of International Education (2021)",
+        "2nd place, International Data Analysis Olympiad (IDAO 2020) — online round",
+        "Yandex Я-профи AI Student Olympiad — prizewinner (2020)",
+        "Yandex Я-профи Big Data Student Olympiad — prizewinner (2020)",
+        "Yandex IT Winter School Тебе Решать! — 3rd place (2020)",
+        "Rector's Scholarship, Bauman MSTU — top 5%"
+      ],
+      "knowsAbout": [
+        "Multi-agent Systems",
+        "Agentic AI",
+        "Large Language Models",
+        "Retrieval-Augmented Generation",
+        "Computer Vision",
+        "Vision Transformers",
+        "Grounding DINO",
+        "Segment Anything",
+        "StyleGAN2",
+        "PyTorch",
+        "TensorFlow",
+        "Hugging Face",
+        "LangChain",
+        "LangGraph",
+        "Go",
+        "TypeScript",
+        "Python",
+        "Linux Landlock",
+        "seccomp",
+        "WebTorrent",
+        "Service Workers"
+      ],
+      "knowsLanguage": ["English", "Russian", "French"]
+    }
+    </script>
+
+    <!-- JSON-LD: Projects as CreativeWork -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Selected Projects by Nikita Lokhmachev",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "item": { "@type": "SoftwareSourceCode", "name": "Greywall", "description": "Container-free, deny-by-default sandbox for AI coding agents. Kernel-enforced filesystem, network, and syscall isolation for Linux and macOS.", "programmingLanguage": "Go", "codeRepository": "https://github.com/GreyhavenHQ/greywall", "license": "https://www.apache.org/licenses/LICENSE-2.0" } },
+        { "@type": "ListItem", "position": 2, "item": { "@type": "WebSite", "name": "Clockout", "description": "AI-powered local professional networking app. Nikita built consumer-AI systems on the platform including the AI-introductions matching engine and the AI-based user-approval system, as a consulting engagement.", "url": "https://clockoutapp.com/" } },
+        { "@type": "ListItem", "position": 3, "item": { "@type": "SoftwareSourceCode", "name": "Packrat", "description": "Open-source .wacz web-archive viewer with peer-to-peer WebTorrent loading and OPFS-backed local storage. Nikita drove the WebTorrent integration, the in-archive search experience, and the magnet-link share UI.", "programmingLanguage": "TypeScript", "codeRepository": "https://github.com/Monadical-SAS/argo" } },
+        { "@type": "ListItem", "position": 4, "item": { "@type": "ScholarlyArticle", "name": "Map Estimation with Deep Dual Path Autoencoders and Skip Connection Learning", "author": { "@type": "Person", "name": "Nikita Lokhmachev" }, "isPartOf": { "@type": "PublicationIssue", "isPartOf": { "@type": "Periodical", "name": "IEEE PIMRC 2023" } } } },
+        { "@type": "ListItem", "position": 5, "item": { "@type": "SocialMediaPosting", "name": "Who Controls Your Agent's Context? (AI Safety México meetup)", "description": "Talk at the AI Safety México meetup (91 registered attendees, co-hosted with Janeth Valdivia and Angel Tenorio) on data sovereignty for AI agents — who owns the context, where the data goes, and why the security layer around your AI tools should be independent of the model vendor. Connects the LATAM AI safety community to the Greywall sandbox work.", "datePublished": "2026-04", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7451083120159854592/", "author": { "@type": "Person", "name": "Nikita Lokhmachev" } } },
+        { "@type": "ListItem", "position": 6, "item": { "@type": "VideoObject", "name": "Who Pressed Enter?", "description": "Talk at the AI CDMX community on agentic AI, the accountability question behind autonomous systems, and what changes when humans stop being the ones pressing Enter.", "publisher": { "@type": "Organization", "name": "AI CDMX" }, "contentUrl": "https://www.youtube.com/watch?v=RCzJrMWFBZ4", "embedUrl": "https://www.youtube.com/embed/RCzJrMWFBZ4", "thumbnailUrl": "https://i.ytimg.com/vi/RCzJrMWFBZ4/hqdefault.jpg" } },
+        { "@type": "ListItem", "position": 7, "item": { "@type": "SocialMediaPosting", "name": "AI, Work, and the Next Decade of Jobs (YPWACC AI Panel)", "description": "Panel discussion on AI's impact on industries, workflow automation, the ethics of AI-generated content, and the role of continuous learning across generations. Hosted by the Young Professionals of the Charlotte Chamber.", "datePublished": "2023", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7167612797458051072/", "author": { "@type": "Person", "name": "Nikita Lokhmachev" } } }
+      ]
+    }
+    </script>
+</head>
+<body class="antialiased min-h-screen flex flex-col relative overflow-x-hidden">
+    <a class="skip-link" href="#main">SKIP TO CONTENT</a>
+
+    <!-- Site-wide drifting geometric shapes (Pattern-Break ambient backdrop) -->
+    <div class="ambient-shapes" aria-hidden="true">
+        <div class="shape leaf-shape s1"></div>
+        <div class="shape square neon s2"></div>
+        <div class="shape circle s3"></div>
+        <div class="shape leaf-shape-r s4"></div>
+        <div class="shape square peach s5"></div>
+        <div class="shape circle neon s6"></div>
+        <div class="shape leaf-shape s7"></div>
+        <div class="shape square s8"></div>
+    </div>
+
+    <!-- ===== TopNav ===== -->
+    <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-surface/70 border-b border-outline-variant/40">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full">
+            <a href="#top" class="flex items-center gap-3 leading-none">
+                <svg viewBox="0 0 100 100" class="w-9 h-9 md:w-10 md:h-10 shrink-0" aria-hidden="true">
+                    <path d="M 50 15 A 35 35 0 0 0 15 50 L 50 50 Z" fill="#BFC2FF" transform="translate(0, -2)" />
+                    <path d="M 50 85 A 35 35 0 0 0 85 50 L 50 50 Z" fill="#BFC2FF" transform="translate(0, 2)" />
+                    <rect x="75" y="15" width="8" height="8" fill="#BFC2FF" />
+                    <line x1="50" y1="10" x2="50" y2="90" stroke="#e5e2e1" stroke-width="2" />
+                </svg>
+                <span class="font-display text-2xl md:text-3xl font-extrabold uppercase tracking-tighter text-primary">
+                    NIKITA<span class="text-secondary">.</span>LOKHMACHEV
+                </span>
+            </a>
+            <nav aria-label="Primary" class="hidden md:flex gap-6 items-center font-mono text-caps uppercase">
+                <a href="#work" class="text-on-surface-variant hover:text-primary transition link-stitch">Work</a>
+                <a href="#oss" class="text-on-surface-variant hover:text-primary transition link-stitch">OSS</a>
+                <a href="#research" class="text-on-surface-variant hover:text-primary transition link-stitch">Research</a>
+                <a href="#impact" class="text-on-surface-variant hover:text-primary transition link-stitch">Impact</a>
+                <a href="#speaking" class="text-on-surface-variant hover:text-primary transition link-stitch">Speaking</a>
+                <a href="#contact" class="text-on-surface-variant hover:text-primary transition link-stitch">Contact</a>
+            </nav>
+            <a href="mailto:lokhmachevnikita@gmail.com" class="liquid bg-primary text-on-primary font-mono text-caps uppercase px-5 py-2.5 rounded-full hidden md:inline-block">
+                Reach Me →
+            </a>
+        </div>
+    </header>
+
+    <main id="main" class="flex-grow">
+
+        <!-- ===== HERO ===== -->
+        <section id="top" class="relative pt-24 md:pt-32 pb-24 md:pb-32 px-margin-mobile md:px-margin-desktop overflow-hidden">
+            <!-- Background atmosphere -->
+            <div aria-hidden="true" class="mesh-blob b1"></div>
+            <div aria-hidden="true" class="mesh-blob b2"></div>
+            <div aria-hidden="true" class="mesh-blob b3"></div>
+            <svg aria-hidden="true" class="constellation" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+                <!-- nodes (ox/oy = anchor point, JS drifts within a radius) -->
+                <circle id="cn0" class="n1" cx="120"  cy="90"  r="3" data-ox="120"  data-oy="90"  />
+                <circle id="cn1" class="n2" cx="320"  cy="220" r="3" data-ox="320"  data-oy="220" />
+                <circle id="cn2" class="n3" cx="540"  cy="120" r="3" data-ox="540"  data-oy="120" />
+                <circle id="cn3" class="n4" cx="720"  cy="280" r="3" data-ox="720"  data-oy="280" />
+                <circle id="cn4" class="n5" cx="940"  cy="160" r="3" data-ox="940"  data-oy="160" />
+                <circle id="cn5" class="n6" cx="1120" cy="320" r="3" data-ox="1120" data-oy="320" />
+                <circle id="cn6" class="n2" cx="200"  cy="430" r="3" data-ox="200"  data-oy="430" />
+                <circle id="cn7" class="n4" cx="480"  cy="470" r="3" data-ox="480"  data-oy="470" />
+                <circle id="cn8" class="n5" cx="800"  cy="500" r="3" data-ox="800"  data-oy="500" />
+                <circle id="cn9" class="n3" cx="1060" cy="500" r="3" data-ox="1060" data-oy="500" />
+                <!-- edges (data-from/data-to track moving endpoints) -->
+                <line class="l1" data-from="cn0" data-to="cn1" x1="120"  y1="90"  x2="320"  y2="220" />
+                <line class="l2" data-from="cn1" data-to="cn2" x1="320"  y1="220" x2="540"  y2="120" />
+                <line class="l3" data-from="cn2" data-to="cn3" x1="540"  y1="120" x2="720"  y2="280" />
+                <line class="l4" data-from="cn3" data-to="cn4" x1="720"  y1="280" x2="940"  y2="160" />
+                <line class="l5" data-from="cn4" data-to="cn5" x1="940"  y1="160" x2="1120" y2="320" />
+                <line class="l3" data-from="cn1" data-to="cn6" x1="320"  y1="220" x2="200"  y2="430" />
+                <line class="l4" data-from="cn6" data-to="cn7" x1="200"  y1="430" x2="480"  y2="470" />
+                <line class="l5" data-from="cn7" data-to="cn8" x1="480"  y1="470" x2="800"  y2="500" />
+                <line class="l1" data-from="cn8" data-to="cn9" x1="800"  y1="500" x2="1060" y2="500" />
+                <line class="l2" data-from="cn3" data-to="cn7" x1="720"  y1="280" x2="480"  y2="470" />
+                <line class="l4" data-from="cn4" data-to="cn8" x1="940"  y1="160" x2="800"  y2="500" />
+            </svg>
+
+            <div class="hero-content">
+            <h1 class="font-display text-display-xl text-primary uppercase max-w-6xl">
+                I build AI that<br />
+                <span class="text-secondary italic font-light">actually</span> ships.
+            </h1>
+
+            <p class="font-body text-body-lg text-on-surface-variant mt-10 max-w-2xl">
+                AI / ML engineer with <strong class="text-on-surface">6+ years</strong> across production computer vision, multi-agent and LLM systems, RAG and agentic pipelines, and security-focused developer tools. I ship code, papers, and products.
+            </p>
+
+            <div class="mt-12 flex flex-wrap gap-3">
+                <span class="font-mono text-caps uppercase border border-primary text-primary rounded-full px-4 py-2">AGENTIC AI</span>
+                <span class="font-mono text-caps uppercase border border-primary text-primary rounded-full px-4 py-2">MULTI-AGENT</span>
+                <span class="font-mono text-caps uppercase border border-primary text-primary rounded-full px-4 py-2">RAG</span>
+                <span class="font-mono text-caps uppercase border border-primary text-primary rounded-full px-4 py-2">MCP</span>
+                <span class="font-mono text-caps uppercase border border-primary text-primary rounded-full px-4 py-2">COMPUTER VISION</span>
+                <span class="font-mono text-caps uppercase border border-secondary text-secondary rounded-full px-4 py-2">AI TECH LEAD</span>
+                <span class="font-mono text-caps uppercase border border-secondary text-secondary rounded-full px-4 py-2">FOUNDING ENGINEER</span>
+            </div>
+            </div>
+        </section>
+
+        <!-- ===== HEADLINE STATS RIBBON (marquee) ===== -->
+        <section aria-label="Headline numbers" class="border-y-2 border-primary bg-surface-container-low overflow-hidden py-6">
+            <div class="flex whitespace-nowrap marquee-track gap-16 font-display font-extrabold text-3xl md:text-5xl uppercase text-on-surface-variant">
+                <span class="flex items-center gap-16">
+                    <span class="text-primary">184★ on GitHub</span><span aria-hidden="true">/</span>
+                    <span>$46M cost savings</span><span aria-hidden="true">/</span>
+                    <span class="text-secondary">+6% SOTA model</span><span aria-hidden="true">/</span>
+                    <span>$6M funding contribution</span><span aria-hidden="true">/</span>
+                    <span class="text-primary">$1M infra cost cut</span><span aria-hidden="true">/</span>
+                    <span>50M-image dataset</span><span aria-hidden="true">/</span>
+                    <span class="text-secondary">4.0 GPA · M.S. AI</span><span aria-hidden="true">/</span>
+                    <span>IEEE PIMRC 2023</span><span aria-hidden="true">/</span>
+                    <span class="text-primary">Fulbright Scholar</span><span aria-hidden="true">/</span>
+                    <span>3× faster matching</span><span aria-hidden="true">/</span>
+                    <span class="text-secondary">−56% toxicity</span><span aria-hidden="true">/</span>
+                    <span>+35% user retention</span><span aria-hidden="true">/</span>
+                    <span class="text-primary">70% editing automated</span><span aria-hidden="true">/</span>
+                    <span>5× content speedup</span><span aria-hidden="true">/</span>
+                    <span class="text-secondary">4,500+ communities</span><span aria-hidden="true">/</span>
+                    <span>IDAO '20 silver medal</span><span aria-hidden="true">/</span>
+                </span>
+                <span aria-hidden="true" class="flex items-center gap-16">
+                    <span class="text-primary">184★ on GitHub</span><span>/</span>
+                    <span>$46M cost savings</span><span>/</span>
+                    <span class="text-secondary">+6% SOTA model</span><span>/</span>
+                    <span>$6M funding contribution</span><span>/</span>
+                    <span class="text-primary">$1M infra cost cut</span><span>/</span>
+                    <span>50M-image dataset</span><span>/</span>
+                    <span class="text-secondary">4.0 GPA · M.S. AI</span><span>/</span>
+                    <span>IEEE PIMRC 2023</span><span>/</span>
+                    <span class="text-primary">Fulbright Scholar</span><span>/</span>
+                    <span>3× faster matching</span><span>/</span>
+                    <span class="text-secondary">−56% toxicity</span><span>/</span>
+                    <span>+35% user retention</span><span>/</span>
+                    <span class="text-primary">70% editing automated</span><span>/</span>
+                    <span>5× content speedup</span><span>/</span>
+                    <span class="text-secondary">4,500+ communities</span><span>/</span>
+                    <span>IDAO '20 silver medal</span><span>/</span>
+                </span>
+            </div>
+        </section>
+
+        <!-- ===== WORK (asymmetric showcase) ===== -->
+        <section id="work" class="px-margin-mobile md:px-margin-desktop py-32 md:py-48">
+            <div class="mb-16 md:mb-24">
+                <h2 class="font-display text-display-lg text-primary uppercase leading-none">
+                    Selected<br />work.
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter md:auto-rows-[280px]">
+                <!-- GREYWALL · the giant card -->
+                <article class="md:col-span-7 md:row-span-2 border-2 border-primary bg-surface-container leaf p-8 md:p-12 flex flex-col justify-between offset-primary relative overflow-hidden">
+                    <header class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="font-mono text-caps uppercase text-secondary mb-2">Open-source · Apache-2.0 · Go</p>
+                            <h3 class="font-display text-headline-lg text-on-surface uppercase">Greywall</h3>
+                            <p class="font-mono text-caps uppercase text-on-surface-variant mt-2">★ 184 · CONTRIBUTOR</p>
+                        </div>
+                        <span aria-hidden="true" class="font-display font-extrabold text-5xl md:text-7xl text-primary opacity-30 leading-none">01</span>
+                    </header>
+                    <div>
+                        <p class="font-body text-body-lg text-on-surface-variant max-w-xl mt-8">
+                            A container-free, <span class="text-on-surface">deny-by-default sandbox for AI coding agents</span>. Kernel-enforced filesystem, network, and syscall isolation for Linux (Landlock + seccomp) and macOS.
+                        </p>
+                        <a href="https://github.com/GreyhavenHQ/greywall" class="liquid inline-block mt-8 bg-primary text-on-primary font-mono text-caps uppercase rounded-full px-6 py-3">
+                            VIEW REPOSITORY →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- CLOCKOUT · vertical asymmetry -->
+                <article class="md:col-span-5 md:row-span-2 md:mt-24 border-2 border-secondary bg-surface-container leaf-r p-8 md:p-10 flex flex-col justify-between offset-secondary">
+                    <header class="flex items-start justify-between gap-4">
+                        <div>
+                            <p class="font-mono text-caps uppercase text-primary mb-2">Consulting · Consumer AI</p>
+                            <h3 class="font-display text-headline-md text-on-surface uppercase">Clockout</h3>
+                            <p class="font-mono text-caps uppercase text-on-surface-variant mt-2">AI / ML CONSULTANT</p>
+                        </div>
+                        <span aria-hidden="true" class="font-display font-extrabold text-5xl md:text-7xl text-secondary opacity-30 leading-none">02</span>
+                    </header>
+                    <div>
+                        <p class="font-body text-body-md text-on-surface-variant max-w-md mt-6">
+                            Built consumer-AI systems on the platform: the <span class="text-on-surface">AI-introductions matching engine</span> and the <span class="text-on-surface">AI-based user-approval system</span> behind the "no spam, no endless scrolling" promise. Live consumer app with 4,500+ communities.
+                        </p>
+                        <a href="https://clockoutapp.com/" class="liquid inline-block mt-6 border-2 border-secondary text-secondary font-mono text-caps uppercase rounded-full px-6 py-3 hover:bg-secondary hover:text-surface">
+                            VIEW PRODUCT →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- PACKRAT -->
+                <article class="md:col-span-5 md:row-span-1 md:-mt-12 border-2 border-outline bg-surface-container leaf p-8 flex flex-col justify-between hover:border-tertiary transition-colors">
+                    <header>
+                        <p class="font-mono text-caps uppercase text-tertiary mb-2">Open-source · Core Developer</p>
+                        <h3 class="font-display text-headline-md text-on-surface uppercase">Packrat</h3>
+                    </header>
+                    <p class="font-body text-body-md text-on-surface-variant mt-4">
+                        Peer-to-peer <code class="font-mono text-primary">.wacz</code> archive viewer. I drove the WebTorrent integration, in-archive search, magnet-link sharing, and OPFS browser-local storage.
+                    </p>
+                    <a href="https://github.com/Monadical-SAS/argo" class="font-mono text-caps uppercase text-on-surface mt-4 link-stitch self-start">→ REPOSITORY</a>
+                </article>
+
+                <!-- IEEE PIMRC paper -->
+                <article class="md:col-span-7 md:row-span-1 border-2 border-outline-variant bg-surface-container-lowest leaf-r p-8 flex flex-col md:flex-row gap-6 items-start justify-between">
+                    <div>
+                        <p class="font-mono text-caps uppercase text-primary mb-2">Research · IEEE PIMRC 2023</p>
+                        <h3 class="font-display text-headline-md text-on-surface uppercase">Deep Dual Path Autoencoders</h3>
+                        <p class="font-body text-body-md text-on-surface-variant mt-3 max-w-lg">
+                            <em>Map Estimation with Deep Dual Path Autoencoders and Skip Connection Learning</em>. First-author publication; code open-source at <code class="font-mono text-primary">radio-map-estimation-public</code> (13★).
+                        </p>
+                    </div>
+                    <a href="https://github.com/nikitalokhmachev-ai/radio-map-estimation-public" class="liquid border-2 border-primary text-primary font-mono text-caps uppercase rounded-full px-5 py-2.5 hover:bg-primary hover:text-on-primary shrink-0">
+                        VIEW CODE →
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== OPEN SOURCE ===== -->
+        <section id="oss" class="px-margin-mobile md:px-margin-desktop py-32 md:py-48 border-t border-outline-variant">
+            <p class="font-mono text-caps uppercase text-secondary mb-6">// OPEN_SOURCE_CONTRIBUTIONS</p>
+            <h2 class="font-display text-display-lg text-primary uppercase max-w-3xl">
+                Code I&apos;ve<br /><span class="italic font-light">shipped to the public.</span>
+            </h2>
+
+            <div class="mt-16 grid gap-4 md:gap-6">
+                <!-- repo rows -->
+                <a href="https://github.com/GreyhavenHQ/greywall" class="group grid grid-cols-12 gap-4 items-baseline border-b border-outline-variant py-6 hover:bg-surface-container-low transition px-2 -mx-2 rounded">
+                    <span class="col-span-1 font-mono text-caps text-outline">01</span>
+                    <span class="col-span-12 md:col-span-4 font-display font-bold text-2xl text-on-surface uppercase group-hover:text-primary transition">Greywall</span>
+                    <span class="col-span-8 md:col-span-5 font-body text-body-md text-on-surface-variant">Sandbox for AI coding agents. Landlock + seccomp + macOS isolation.</span>
+                    <span class="col-span-4 md:col-span-2 font-mono text-caps uppercase text-secondary text-right">★ 184 · GO</span>
+                </a>
+                <a href="https://github.com/GreyhavenHQ/greyproxy" class="group grid grid-cols-12 gap-4 items-baseline border-b border-outline-variant py-6 hover:bg-surface-container-low transition px-2 -mx-2 rounded">
+                    <span class="col-span-1 font-mono text-caps text-outline">02</span>
+                    <span class="col-span-12 md:col-span-4 font-display font-bold text-2xl text-on-surface uppercase group-hover:text-primary transition">GreyProxy</span>
+                    <span class="col-span-8 md:col-span-5 font-body text-body-md text-on-surface-variant">SOCKS5 + DNS proxy companion. ~4ms per-request overhead.</span>
+                    <span class="col-span-4 md:col-span-2 font-mono text-caps uppercase text-secondary text-right">★ 35 · GO</span>
+                </a>
+                <a href="https://github.com/Monadical-SAS/argo" class="group grid grid-cols-12 gap-4 items-baseline border-b border-outline-variant py-6 hover:bg-surface-container-low transition px-2 -mx-2 rounded">
+                    <span class="col-span-1 font-mono text-caps text-outline">03</span>
+                    <span class="col-span-12 md:col-span-4 font-display font-bold text-2xl text-on-surface uppercase group-hover:text-primary transition">Packrat</span>
+                    <span class="col-span-8 md:col-span-5 font-body text-body-md text-on-surface-variant">P2P <code class="font-mono text-primary">.wacz</code> archive viewer. WebTorrent + OPFS + in-archive search.</span>
+                    <span class="col-span-4 md:col-span-2 font-mono text-caps uppercase text-tertiary text-right">CORE DEV · TS</span>
+                </a>
+                <a href="https://github.com/nikitalokhmachev-ai/radio-map-estimation-public" class="group grid grid-cols-12 gap-4 items-baseline border-b border-outline-variant py-6 hover:bg-surface-container-low transition px-2 -mx-2 rounded">
+                    <span class="col-span-1 font-mono text-caps text-outline">04</span>
+                    <span class="col-span-12 md:col-span-4 font-display font-bold text-2xl text-on-surface uppercase group-hover:text-primary transition">radio-map-estimation</span>
+                    <span class="col-span-8 md:col-span-5 font-body text-body-md text-on-surface-variant">Code release for the IEEE PIMRC 2023 paper on deep dual-path autoencoders.</span>
+                    <span class="col-span-4 md:col-span-2 font-mono text-caps uppercase text-secondary text-right">★ 13 · PYTORCH</span>
+                </a>
+                <a href="https://github.com/nikitalokhmachev-ai/line-art-colorization" class="group grid grid-cols-12 gap-4 items-baseline border-b border-outline-variant py-6 hover:bg-surface-container-low transition px-2 -mx-2 rounded">
+                    <span class="col-span-1 font-mono text-caps text-outline">05</span>
+                    <span class="col-span-12 md:col-span-4 font-display font-bold text-2xl text-on-surface uppercase group-hover:text-primary transition">Line Art Colorization</span>
+                    <span class="col-span-8 md:col-span-5 font-body text-body-md text-on-surface-variant">Simplified AlacGAN line-art colorizer. GAN-driven sketch coloring.</span>
+                    <span class="col-span-4 md:col-span-2 font-mono text-caps uppercase text-secondary text-right">★ 11 · PYTORCH</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== IMPACT (oversized numbers) ===== -->
+        <section id="impact" class="px-margin-mobile md:px-margin-desktop py-32 md:py-48 border-t border-outline-variant">
+            <p class="font-mono text-caps uppercase text-secondary mb-6">// SELECTED_IMPACT</p>
+            <h2 class="font-display text-display-lg text-primary uppercase max-w-4xl">
+                The numbers I&apos;ll<br /><span class="italic font-light">defend in an interview.</span>
+            </h2>
+
+            <div class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                <article class="border-2 border-outline-variant bg-surface-container leaf p-10 hover:border-secondary transition">
+                    <p class="font-display font-extrabold text-5xl md:text-7xl text-secondary leading-none">$46M</p>
+                    <p class="font-mono text-caps uppercase text-on-surface-variant mt-4">HERBICIDE COST AVOIDED</p>
+                    <p class="font-body text-body-md text-on-surface mt-6">
+                        Built a transformer that beat Blue River Technology's production model by <strong>+6% mAP</strong> and was selected as the new state of the art. The mAP gain mapped to ~$46M of herbicide savings in Iowa fields alone.
+                    </p>
+                </article>
+                <article class="border-2 border-outline-variant bg-surface-container leaf-r p-10 hover:border-primary transition md:mt-16">
+                    <p class="font-display font-extrabold text-5xl md:text-7xl text-primary leading-none">$6M+</p>
+                    <p class="font-mono text-caps uppercase text-on-surface-variant mt-4">FUNDING CONTRIBUTION</p>
+                    <p class="font-body text-body-md text-on-surface mt-6">
+                        Shipped Grounding DINO + Segment Anything natural-language object detection at Craftwork (contributed to the <strong>$4M round + YC launch</strong>). Augmented Reality room-sizing brought in an additional <strong>$2M</strong>.
+                    </p>
+                </article>
+                <article class="border-2 border-outline-variant bg-surface-container leaf-r p-10 hover:border-tertiary transition">
+                    <p class="font-display font-extrabold text-5xl md:text-7xl text-tertiary leading-none">$1M</p>
+                    <p class="font-mono text-caps uppercase text-on-surface-variant mt-4">GPU INFRA COST CUT</p>
+                    <p class="font-body text-body-md text-on-surface mt-6">
+                        Built a computer-vision multi-camera person re-identification algorithm at Kryptonite that cut ~$1M of GPU cost. Trained SwAV / SimCLR self-supervised representations over a <strong>50M-image Instagram dataset</strong> for a +4% retrieval gain.
+                    </p>
+                </article>
+                <article class="border-2 border-outline-variant bg-surface-container leaf p-10 hover:border-secondary transition md:mt-16">
+                    <p class="font-display font-extrabold text-5xl md:text-7xl text-secondary leading-none">3×</p>
+                    <p class="font-mono text-caps uppercase text-on-surface-variant mt-4">FASTER MATCHING · CONVERGE LABS</p>
+                    <p class="font-body text-body-md text-on-surface mt-6">
+                        Co-founder &amp; Head of AI at Converge Labs. Shipped AI-driven matching (<strong>3× faster</strong>), real-time sentiment moderation (<strong>−56% toxicity, +35% retention</strong>), AI video generation (<strong>70% of editing automated</strong>), voice-onboarding (<strong>+55% retention</strong>).
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== RESEARCH & PROJECTS ===== -->
+        <section id="research" class="px-margin-mobile md:px-margin-desktop py-32 md:py-48 border-t border-outline-variant">
+            <p class="font-mono text-caps uppercase text-secondary mb-6">// RESEARCH_AND_PROJECTS</p>
+            <h2 class="font-display text-display-lg text-primary uppercase max-w-3xl">
+                The work<br /><span class="italic font-light">behind the numbers.</span>
+            </h2>
+
+            <!-- Featured publication -->
+            <article class="mt-16 border-2 border-primary bg-surface-container leaf-r p-8 md:p-12 offset-primary relative overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+                    <div class="md:col-span-8">
+                        <p class="font-mono text-caps uppercase text-secondary mb-3">IEEE · 31 Oct 2023 · Peer-reviewed</p>
+                        <h3 class="font-display text-headline-md text-on-surface uppercase leading-tight">
+                            Radio Map Estimation with<br /><span class="text-primary italic font-light normal-case">Deep Dual Path Autoencoders &amp; Skip Connection Learning</span>
+                        </h3>
+                        <p class="font-body text-body-md text-on-surface-variant mt-6 max-w-2xl">
+                            Predicting radio power at every location and frequency in a 2D area from sparse measurements — relevant to fingerprint localization, user-cell association, MIMO power control, and UAV path planning. The paper introduces the <strong class="text-on-surface">Dual Path Autoencoder</strong> (separating environmental and signal information) and <strong class="text-on-surface">Skip Connection Autoencoders</strong> (increasing encoder-decoder information flow), and benchmarks them against state-of-the-art CNN autoencoders across sampling rates and architecture sizes.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="font-mono text-caps uppercase border border-primary text-primary rounded-full px-3 py-1">DEEP LEARNING</span>
+                            <span class="font-mono text-caps uppercase border border-primary text-primary rounded-full px-3 py-1">AUTOENCODERS</span>
+                            <span class="font-mono text-caps uppercase border border-primary text-primary rounded-full px-3 py-1">SIGNAL PROCESSING</span>
+                            <span class="font-mono text-caps uppercase border border-primary text-primary rounded-full px-3 py-1">UAV · MIMO</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-4 flex flex-col gap-3 md:items-end md:text-right">
+                        <span aria-hidden="true" class="font-display font-extrabold text-7xl text-primary opacity-30 leading-none">★13</span>
+                        <a href="https://github.com/nikitalokhmachev-ai/radio-map-estimation-public" class="liquid bg-primary text-on-primary font-mono text-caps uppercase rounded-full px-5 py-2.5 self-start md:self-end" target="_blank" rel="noopener">VIEW CODE →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Additional research -->
+            <p class="mt-6 font-body text-body-md text-on-surface-variant max-w-3xl">
+                <span class="font-mono text-caps uppercase text-tertiary mr-2">+ ADDITIONAL RESEARCH</span>
+                8 conference papers published in the BMSTU scientific journal during my undergraduate research on neural-network-based object detection, classification approaches for Kaggle, control-signal formation from frame streams, pattern recognition for mobile autonomous platforms, and virtual-camera modeling in MATLAB (regional and Russian national scientific and technical conferences).
+            </p>
+
+            <!-- Selected projects list -->
+            <h3 class="mt-24 font-display font-bold text-2xl uppercase text-on-surface mb-10 flex items-center gap-4">
+                <span class="font-mono text-caps text-secondary">// SELECTED_PROJECTS</span>
+            </h3>
+
+            <div class="grid gap-4 md:gap-6">
+                <article class="group grid grid-cols-12 gap-4 items-baseline border-b border-outline-variant py-6 px-2 -mx-2 rounded">
+                    <span class="col-span-1 font-mono text-caps text-outline">01</span>
+                    <div class="col-span-12 md:col-span-4">
+                        <h4 class="font-display font-bold text-xl text-on-surface uppercase">Brainwave Image Reconstruction</h4>
+                        <p class="font-mono text-caps uppercase text-on-surface-variant mt-1">UNT · Aug–Dec 2022</p>
+                    </div>
+                    <p class="col-span-12 md:col-span-5 font-body text-body-md text-on-surface-variant">End-to-end brain-wave → image reconstruction using a vision transformer and a Parti-style decoder. M.S. thesis area.</p>
+                    <span class="col-span-12 md:col-span-2 font-mono text-caps uppercase text-secondary md:text-right">VIT · PYTORCH</span>
+                </article>
+
+                <article class="group grid grid-cols-12 gap-4 items-baseline border-b border-outline-variant py-6 px-2 -mx-2 rounded">
+                    <span class="col-span-1 font-mono text-caps text-outline">02</span>
+                    <div class="col-span-12 md:col-span-4">
+                        <h4 class="font-display font-bold text-xl text-on-surface uppercase">Segformer Crop/Weed Segmentation</h4>
+                        <p class="font-mono text-caps uppercase text-on-surface-variant mt-1">Blue River Technology · May–Jul 2022</p>
+                    </div>
+                    <p class="col-span-12 md:col-span-5 font-body text-body-md text-on-surface-variant">Transformer-based image segmentation that outperformed the production model and is the candidate for the new SOTA in production. Underpinned the +6% mAP / ~$46M herbicide-savings result.</p>
+                    <span class="col-span-12 md:col-span-2 font-mono text-caps uppercase text-secondary md:text-right">SEGFORMER · PYTORCH</span>
+                </article>
+
+                <article class="group grid grid-cols-12 gap-4 items-baseline border-b border-outline-variant py-6 px-2 -mx-2 rounded">
+                    <span class="col-span-1 font-mono text-caps text-outline">03</span>
+                    <div class="col-span-12 md:col-span-4">
+                        <h4 class="font-display font-bold text-xl text-on-surface uppercase">Knowledge Distillation for Crop/Weed</h4>
+                        <p class="font-mono text-caps uppercase text-on-surface-variant mt-1">Blue River Technology · Jul–Aug 2022</p>
+                    </div>
+                    <p class="col-span-12 md:col-span-5 font-body text-body-md text-on-surface-variant">Trained a high-accuracy teacher to label unlabeled data, then fine-tuned the smaller production model on the combined set. Statistically significant accuracy lift, confirming the distillation pipeline works on real-world agricultural imagery.</p>
+                    <span class="col-span-12 md:col-span-2 font-mono text-caps uppercase text-secondary md:text-right">DISTILLATION · PYTORCH</span>
+                </article>
+
+                <article class="group grid grid-cols-12 gap-4 items-baseline border-b border-outline-variant py-6 px-2 -mx-2 rounded">
+                    <span class="col-span-1 font-mono text-caps text-outline">04</span>
+                    <div class="col-span-12 md:col-span-4">
+                        <h4 class="font-display font-bold text-xl text-on-surface uppercase">Self-Supervised Representation Learning</h4>
+                        <p class="font-mono text-caps uppercase text-on-surface-variant mt-1">Kryptonite · Sep–Dec 2020</p>
+                    </div>
+                    <p class="col-span-12 md:col-span-5 font-body text-body-md text-on-surface-variant">Research on the best architecture for learning feature representations from unlabeled images. SimCLR (Google) and SwAV (Facebook) over ResNet, ResNeXt, EfficientNet backbones. Downstream: image retrieval and object detection.</p>
+                    <span class="col-span-12 md:col-span-2 font-mono text-caps uppercase text-tertiary md:text-right">SIMCLR · SWAV</span>
+                </article>
+
+                <article class="group grid grid-cols-12 gap-4 items-baseline border-b border-outline-variant py-6 px-2 -mx-2 rounded">
+                    <span class="col-span-1 font-mono text-caps text-outline">05</span>
+                    <div class="col-span-12 md:col-span-4">
+                        <h4 class="font-display font-bold text-xl text-on-surface uppercase">Multicamera Person Re-Identification</h4>
+                        <p class="font-mono text-caps uppercase text-on-surface-variant mt-1">Kryptonite · Mar–Aug 2021</p>
+                    </div>
+                    <p class="col-span-12 md:col-span-5 font-body text-body-md text-on-surface-variant">N camera views, partial overlap, all subjects in the same clothes — so no deep-learning crutch. Used intrinsic and extrinsic camera parameters to associate identities across views. Underpinned the ~$1M GPU-cost reduction at Kryptonite.</p>
+                    <span class="col-span-12 md:col-span-2 font-mono text-caps uppercase text-tertiary md:text-right">OPENCV · GEOMETRY</span>
+                </article>
+
+                <article class="group grid grid-cols-12 gap-4 items-baseline border-b border-outline-variant py-6 px-2 -mx-2 rounded">
+                    <span class="col-span-1 font-mono text-caps text-outline">06</span>
+                    <div class="col-span-12 md:col-span-4">
+                        <h4 class="font-display font-bold text-xl text-on-surface uppercase">Hybrid Classical / Quantum CNN + MCTS for Chess</h4>
+                        <p class="font-mono text-caps uppercase text-on-surface-variant mt-1">UNT · Jan–Apr 2022</p>
+                    </div>
+                    <p class="col-span-12 md:col-span-5 font-body text-body-md text-on-surface-variant">Fundamentals-of-AI class project pushed past the assignment: a hybrid classical / quantum convolutional network paired with Monte Carlo Tree Search for chess move evaluation.</p>
+                    <span class="col-span-12 md:col-span-2 font-mono text-caps uppercase text-secondary md:text-right">QUANTUM · MCTS</span>
+                </article>
+
+                <article class="group grid grid-cols-12 gap-4 items-baseline border-b border-outline-variant py-6 px-2 -mx-2 rounded">
+                    <span class="col-span-1 font-mono text-caps text-outline">07</span>
+                    <div class="col-span-12 md:col-span-4">
+                        <h4 class="font-display font-bold text-xl text-on-surface uppercase">Humana Mays Healthcare Analytics</h4>
+                        <p class="font-mono text-caps uppercase text-on-surface-variant mt-1">UNT · Sep–Dec 2021</p>
+                    </div>
+                    <p class="col-span-12 md:col-span-5 font-body text-body-md text-on-surface-variant">Gradient-boosting model over ~400 features (plus engineered ones) to predict COVID vaccination status — used to target Humana's outreach. <strong class="text-on-surface">Ranked 16th of ~700 teams</strong>.</p>
+                    <span class="col-span-12 md:col-span-2 font-mono text-caps uppercase text-secondary md:text-right">GBM · CASE COMP</span>
+                </article>
+
+                <article class="group grid grid-cols-12 gap-4 items-baseline border-b border-outline-variant py-6 px-2 -mx-2 rounded">
+                    <span class="col-span-1 font-mono text-caps text-outline">08</span>
+                    <div class="col-span-12 md:col-span-4">
+                        <h4 class="font-display font-bold text-xl text-on-surface uppercase">Satellite Position Prediction <span class="text-primary">· IDAO 2020</span></h4>
+                        <p class="font-mono text-caps uppercase text-on-surface-variant mt-1"><a href="https://idao.world/" class="link-stitch hover:text-primary" target="_blank" rel="noopener">idao.world</a> · Jan–Feb 2020</p>
+                    </div>
+                    <p class="col-span-12 md:col-span-5 font-body text-body-md text-on-surface-variant">Predicted satellite position and velocity at the International Data Analysis Olympiad. Gradient boosting plus system-performance optimization — landed 2nd place in the online round.</p>
+                    <span class="col-span-12 md:col-span-2 font-mono text-caps uppercase text-secondary md:text-right">★ 2ND / WORLD</span>
+                </article>
+
+                <article class="group grid grid-cols-12 gap-4 items-baseline border-b border-outline-variant py-6 px-2 -mx-2 rounded">
+                    <span class="col-span-1 font-mono text-caps text-outline">09</span>
+                    <div class="col-span-12 md:col-span-4">
+                        <h4 class="font-display font-bold text-xl text-on-surface uppercase">Sex / Language Audio Classifier</h4>
+                        <p class="font-mono text-caps uppercase text-on-surface-variant mt-1">Kryptonite · Aug–Sep 2020</p>
+                    </div>
+                    <p class="col-span-12 md:col-span-5 font-body text-body-md text-on-surface-variant">End-to-end multi-label CNN over audio mel-spectrograms. Two heads on a shared backbone: 6-way language classification (EN / RU / DE / FR / ES / AR) and binary speaker-sex classification.</p>
+                    <span class="col-span-12 md:col-span-2 font-mono text-caps uppercase text-tertiary md:text-right">CNN · AUDIO</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== THOUGHT LEADERSHIP ===== -->
+        <section id="speaking" class="px-margin-mobile md:px-margin-desktop py-32 md:py-48 border-t border-outline-variant">
+            <p class="font-mono text-caps uppercase text-secondary mb-6">// THOUGHT_LEADERSHIP</p>
+            <h2 class="font-display text-display-lg text-primary uppercase max-w-3xl">
+                What I<br /><span class="italic font-light">argue for.</span>
+            </h2>
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-12 gap-gutter">
+                <!-- AI Safety México meetup (lead, wide) -->
+                <article class="md:col-span-7 border-2 border-primary bg-surface-container leaf p-8 md:p-10 flex flex-col justify-between offset-primary relative overflow-hidden">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4 flex-wrap">
+                            <span class="font-mono text-caps uppercase text-secondary">AI Safety México · Apr 2026</span>
+                            <span aria-hidden="true" class="font-mono text-caps text-outline">·</span>
+                            <span class="font-mono text-caps uppercase text-on-surface-variant">Speaker · 91 attendees</span>
+                        </div>
+                        <h3 class="font-display text-headline-lg text-on-surface uppercase leading-tight">
+                            Who controls your<br /><span class="text-primary italic font-light normal-case">agent&apos;s context?</span>
+                        </h3>
+                        <p class="font-body text-body-md text-on-surface-variant mt-6 max-w-xl">
+                            Talk at the AI Safety México meetup (co-hosted with Janeth Valdivia and Angel Tenorio) on data sovereignty for AI agents: who owns the context an agent runs in, where the data goes, and why the security layer around your AI tools should be independent of the vendor selling you the model. Connected the LATAM AI safety community to the Greywall sandbox work.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="font-mono text-caps uppercase border border-primary text-primary rounded-full px-3 py-1">AI SAFETY</span>
+                            <span class="font-mono text-caps uppercase border border-primary text-primary rounded-full px-3 py-1">DATA SOVEREIGNTY</span>
+                            <span class="font-mono text-caps uppercase border border-primary text-primary rounded-full px-3 py-1">AGENTIC AI</span>
+                            <span class="font-mono text-caps uppercase border border-primary text-primary rounded-full px-3 py-1">LATAM</span>
+                        </div>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7451083120159854592/" class="liquid inline-block mt-8 bg-primary text-on-primary font-mono text-caps uppercase rounded-full px-6 py-3 self-start" target="_blank" rel="noopener">
+                        READ ON LINKEDIN →
+                    </a>
+                </article>
+
+                <!-- AI CDMX talk -->
+                <article class="md:col-span-5 md:mt-20 border-2 border-secondary bg-surface-container leaf-r p-8 md:p-10 flex flex-col justify-between offset-secondary">
+                    <div>
+                        <div class="flex items-center gap-3 mb-4 flex-wrap">
+                            <span class="font-mono text-caps uppercase text-primary">AI CDMX · Mexico City</span>
+                            <span aria-hidden="true" class="font-mono text-caps text-outline">·</span>
+                            <span class="font-mono text-caps uppercase text-on-surface-variant">Speaker</span>
+                        </div>
+                        <h3 class="font-display text-headline-md text-on-surface uppercase leading-tight">
+                            Who Pressed<br /><span class="text-secondary italic font-light normal-case">Enter?</span>
+                        </h3>
+                        <p class="font-body text-body-md text-on-surface-variant mt-6 max-w-md">
+                            Talk at the AI CDMX community on agentic AI, the accountability question behind autonomous systems, and what changes when you stop being the one pressing Enter.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="font-mono text-caps uppercase border border-secondary text-secondary rounded-full px-3 py-1">AGENTIC AI</span>
+                            <span class="font-mono text-caps uppercase border border-secondary text-secondary rounded-full px-3 py-1">COMMUNITY TALK</span>
+                        </div>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=RCzJrMWFBZ4" class="liquid inline-block mt-8 border-2 border-secondary text-secondary font-mono text-caps uppercase rounded-full px-6 py-3 hover:bg-secondary hover:text-surface self-start" target="_blank" rel="noopener">
+                        WATCH ON YOUTUBE →
+                    </a>
+                </article>
+
+                <!-- YPWACC panel (wide, below) -->
+                <article class="md:col-span-12 border-2 border-outline bg-surface-container-lowest leaf p-8 md:p-10 flex flex-col md:flex-row gap-6 items-start justify-between hover:border-tertiary transition-colors">
+                    <div class="max-w-3xl">
+                        <div class="flex items-center gap-3 mb-4 flex-wrap">
+                            <span class="font-mono text-caps uppercase text-tertiary">YPWACC AI Panel · 2023</span>
+                            <span aria-hidden="true" class="font-mono text-caps text-outline">·</span>
+                            <span class="font-mono text-caps uppercase text-on-surface-variant">Panelist</span>
+                        </div>
+                        <h3 class="font-display text-headline-md text-on-surface uppercase leading-tight">
+                            AI, Work, and the next decade of jobs.
+                        </h3>
+                        <p class="font-body text-body-md text-on-surface-variant mt-4">
+                            Panel on AI's impact on industries, workflow automation, the ethics of AI-generated content, and continuous learning across generations.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="font-mono text-caps uppercase border border-outline-variant text-on-surface-variant rounded-full px-3 py-1">AI ETHICS</span>
+                            <span class="font-mono text-caps uppercase border border-outline-variant text-on-surface-variant rounded-full px-3 py-1">FUTURE OF WORK</span>
+                            <span class="font-mono text-caps uppercase border border-outline-variant text-on-surface-variant rounded-full px-3 py-1">PANEL</span>
+                        </div>
+                    </div>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7167612797458051072/" class="liquid font-mono text-caps uppercase text-tertiary border-2 border-tertiary rounded-full px-5 py-2.5 hover:bg-tertiary hover:text-surface shrink-0 self-end md:self-center" target="_blank" rel="noopener">
+                        READ ON LINKEDIN →
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== EDUCATION & HONORS ===== -->
+        <section class="px-margin-mobile md:px-margin-desktop py-32 md:py-48 border-t border-outline-variant">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+                <div class="md:col-span-5">
+                    <p class="font-mono text-caps uppercase text-secondary mb-6">// EDUCATION_AND_HONORS</p>
+                    <h2 class="font-display text-headline-lg text-primary uppercase">Receipts.</h2>
+                </div>
+                <div class="md:col-span-7 space-y-10">
+                    <div>
+                        <p class="font-mono text-caps uppercase text-on-surface-variant">2021–2023</p>
+                        <h3 class="font-display font-bold text-2xl text-on-surface uppercase mt-2">M.S., Artificial Intelligence</h3>
+                        <p class="font-body text-body-md text-on-surface-variant mt-1">University of North Texas · <span class="text-secondary">GPA 4.0 / 4.0</span> · Fulbright Scholar.</p>
+                    </div>
+                    <div>
+                        <p class="font-mono text-caps uppercase text-on-surface-variant">2016–2020</p>
+                        <h3 class="font-display font-bold text-2xl text-on-surface uppercase mt-2">B.S., Computer Science / Autonomous Systems</h3>
+                        <p class="font-body text-body-md text-on-surface-variant mt-1">Bauman Moscow State Technical University · <span class="text-primary">GPA 3.94 / 4.0</span> · Rector's Scholarship (top 5%).</p>
+                    </div>
+                    <div class="border-t border-outline-variant pt-10">
+                        <p class="font-mono text-caps uppercase text-on-surface-variant mb-6">Honors &amp; Awards</p>
+                        <ul class="font-body text-body-md text-on-surface space-y-3">
+                            <li>
+                                <span class="text-primary font-mono">▸</span> <strong>IEEE PIMRC Publication</strong> (2023). First-author paper on deep dual-path autoencoders for radio-map estimation.
+                            </li>
+                            <li>
+                                <span class="text-primary font-mono">▸</span> <strong>Edmund S. Muskie Professional Fellowship</strong>, Cultural Vistas (May 2022). U.S. Department of State program for emerging Fulbright leaders; placed with Blue River Technology.
+                            </li>
+                            <li>
+                                <span class="text-primary font-mono">▸</span> <strong>Fulbright Foreign Student Scholarship</strong>, Institute of International Education (Aug 2021). ~4,000 awarded globally per year across 160+ countries.
+                            </li>
+                            <li>
+                                <span class="text-primary font-mono">▸</span> <strong>2nd place, <a href="https://idao.world/" class="text-secondary link-stitch hover:text-primary" target="_blank" rel="noopener">International Data Analysis Olympiad (IDAO)</a></strong> — online round, Feb 2020. Satellite position and velocity prediction.
+                            </li>
+                            <li>
+                                <span class="text-primary font-mono">▸</span> <strong>Yandex "Я-профи" AI Student Olympiad</strong> — prizewinner (Jan 2020).
+                            </li>
+                            <li>
+                                <span class="text-primary font-mono">▸</span> <strong>Yandex "Я-профи" Big Data Student Olympiad</strong> — prizewinner (Jan 2020).
+                            </li>
+                            <li>
+                                <span class="text-primary font-mono">▸</span> <strong>Yandex IT Winter School "Тебе Решать!"</strong> — 3rd place (Saint Petersburg, Jan 2020).
+                            </li>
+                            <li>
+                                <span class="text-primary font-mono">▸</span> <strong>Rector's Scholarship</strong>, Bauman MSTU — top 5% of program.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" class="px-margin-mobile md:px-margin-desktop py-32 md:py-48 border-t border-outline-variant">
+            <h2 class="font-display text-display-xl text-primary uppercase max-w-5xl leading-none">
+                Let&apos;s<br />
+                <span class="text-secondary italic font-light">ship something.</span>
+            </h2>
+
+            <p class="font-body text-body-lg text-on-surface-variant mt-10 max-w-2xl">
+                Open to senior IC, staff, founding-engineer, and product-engineering-lead roles in AI / ML, multi-agent infrastructure, agentic AI, computer vision, developer tools, and security-focused AI infrastructure.
+            </p>
+
+            <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <a href="mailto:lokhmachevnikita@gmail.com" class="border-2 border-primary leaf p-8 hover:bg-primary hover:text-on-primary transition group">
+                    <p class="font-mono text-caps uppercase text-on-surface-variant group-hover:text-on-primary/70">EMAIL</p>
+                    <p class="font-display font-bold text-xl mt-2 text-on-surface group-hover:text-on-primary break-all">lokhmachevnikita@gmail.com</p>
+                </a>
+                <a href="https://www.linkedin.com/in/nikitalokhmachev-ai" class="border-2 border-secondary leaf-r p-8 hover:bg-secondary hover:text-surface transition group">
+                    <p class="font-mono text-caps uppercase text-on-surface-variant group-hover:text-surface/70">LINKEDIN</p>
+                    <p class="font-display font-bold text-xl mt-2 text-on-surface group-hover:text-surface">/in/nikitalokhmachev-ai</p>
+                </a>
+                <a href="https://github.com/nikitalokhmachev-ai" class="border-2 border-tertiary leaf p-8 hover:bg-tertiary hover:text-surface transition group">
+                    <p class="font-mono text-caps uppercase text-on-surface-variant group-hover:text-surface/70">GITHUB</p>
+                    <p class="font-display font-bold text-xl mt-2 text-on-surface group-hover:text-surface">/nikitalokhmachev-ai</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-surface-container-lowest border-t-2 border-primary px-margin-mobile md:px-margin-desktop py-12 mt-12">
+        <div class="flex flex-col md:flex-row justify-between gap-8 items-start md:items-end">
+            <div class="flex items-center gap-4">
+                <svg viewBox="0 0 100 100" class="w-12 h-12 shrink-0" aria-hidden="true">
+                    <path d="M 50 15 A 35 35 0 0 0 15 50 L 50 50 Z" fill="#BFC2FF" transform="translate(0, -2)" />
+                    <path d="M 50 85 A 35 35 0 0 0 85 50 L 50 50 Z" fill="#BFC2FF" transform="translate(0, 2)" />
+                    <rect x="75" y="15" width="8" height="8" fill="#BFC2FF" />
+                    <line x1="50" y1="10" x2="50" y2="90" stroke="#e5e2e1" stroke-width="2" />
+                </svg>
+                <div>
+                    <p class="font-display font-extrabold text-3xl text-primary uppercase leading-none">NIKITA<span class="text-secondary">.</span>LOKHMACHEV</p>
+                    <p class="font-mono text-caps uppercase text-outline mt-3">© 2026</p>
+                </div>
+            </div>
+            <nav aria-label="Footer social" class="flex gap-8 font-mono text-caps uppercase">
+                <a href="https://github.com/nikitalokhmachev-ai" class="text-on-surface-variant hover:text-primary link-stitch">GITHUB</a>
+                <a href="https://www.linkedin.com/in/nikitalokhmachev-ai" class="text-on-surface-variant hover:text-primary link-stitch">LINKEDIN</a>
+                <a href="mailto:lokhmachevnikita@gmail.com" class="text-on-surface-variant hover:text-primary link-stitch">EMAIL</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Smooth-scroll polyfill for anchor links + reduced-motion respect -->
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+          const id = a.getAttribute('href').slice(1);
+          const el = document.getElementById(id);
+          if (!el) return;
+          e.preventDefault();
+          el.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+        });
+      });
+    </script>
+
+    <!-- Constellation drift: nodes float slowly toward random targets, lines follow -->
+    <script>
+      (function () {
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const svg = document.querySelector('.constellation');
+        if (!svg) return;
+
+        const circles = Array.from(svg.querySelectorAll('circle[id]'));
+        if (!circles.length) return;
+
+        const nodes = {};
+        circles.forEach(el => {
+          const ox = parseFloat(el.dataset.ox);
+          const oy = parseFloat(el.dataset.oy);
+          nodes[el.id] = {
+            el,
+            ox, oy,
+            cx: ox, cy: oy,
+            tx: ox, ty: oy,
+            radius: 35 + Math.random() * 45,          // each node has its own drift radius
+            speed: 0.0025 + Math.random() * 0.005,    // each node drifts at its own pace
+          };
+        });
+
+        const lines = Array.from(svg.querySelectorAll('line[data-from]')).map(el => ({
+          el,
+          from: el.dataset.from,
+          to: el.dataset.to,
+        }));
+
+        function pickTarget(node) {
+          const angle = Math.random() * Math.PI * 2;
+          const r = Math.random() * node.radius;
+          node.tx = node.ox + Math.cos(angle) * r;
+          node.ty = node.oy + Math.sin(angle) * r;
+        }
+
+        Object.values(nodes).forEach(pickTarget);
+
+        function tick() {
+          for (const id in nodes) {
+            const n = nodes[id];
+            const dx = n.tx - n.cx;
+            const dy = n.ty - n.cy;
+            n.cx += dx * n.speed;
+            n.cy += dy * n.speed;
+            if (Math.hypot(dx, dy) < 0.8) pickTarget(n);
+            n.el.setAttribute('cx', n.cx.toFixed(2));
+            n.el.setAttribute('cy', n.cy.toFixed(2));
+          }
+          for (const line of lines) {
+            const a = nodes[line.from];
+            const b = nodes[line.to];
+            if (!a || !b) continue;
+            line.el.setAttribute('x1', a.cx.toFixed(2));
+            line.el.setAttribute('y1', a.cy.toFixed(2));
+            line.el.setAttribute('x2', b.cx.toFixed(2));
+            line.el.setAttribute('y2', b.cy.toFixed(2));
+          }
+          requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      })();
+    </script>
+</body>
 </html>

@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# AI crawlers (explicitly allowed; per seo-geo 2026 guidance)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+Sitemap: https://nikitalokhmachev-ai.github.io/sitemap.xml

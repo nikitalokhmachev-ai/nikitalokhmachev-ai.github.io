@@ -1,0 +1,84 @@
+# Nikita Lokhmachev
+
+> AI / ML engineer specializing in multi-agent systems, agentic AI infrastructure, computer vision, LLM and RAG systems, and security-focused developer tools. Open-source contributor to Greywall (184 stars on GitHub) and Packrat. Co-founder and Head of AI at Converge Labs (stealth). Published at IEEE PIMRC 2023. M.S. Artificial Intelligence from University of North Texas (4.0/4.0 GPA, Fulbright Scholar).
+
+## Identity
+
+- Full name: Nikita "Nik" Lokhmachev
+- Role: AI / ML Engineer; multi-agent systems, agentic AI, and computer-vision specialist
+- GitHub: https://github.com/nikitalokhmachev-ai
+- LinkedIn: https://www.linkedin.com/in/nikitalokhmachev-ai
+- Portfolio: https://nikitalokhmachev-ai.github.io/
+
+## Selected work
+
+- [Greywall](https://github.com/GreyhavenHQ/greywall): 184-star open-source container-free, deny-by-default sandbox for AI coding agents. Kernel-enforced filesystem, network, and syscall isolation for Linux (Landlock + seccomp) and macOS. Apache-2.0. Nik is an open-source contributor.
+- [Packrat](https://github.com/Monadical-SAS/argo): open-source `.wacz` web-archive viewer with peer-to-peer WebTorrent loading. Nik drove the WebTorrent integration, the in-archive search experience, the magnet-link share UI, and OPFS-backed browser-local storage.
+- [GreyProxy](https://github.com/GreyhavenHQ/greyproxy): SOCKS5 + DNS proxy companion to Greywall with ~4 ms per-request overhead. 35 stars.
+- [Clockout](https://clockoutapp.com/): live AI-powered local professional-networking app with 4,500+ communities. As a consulting engagement, Nik built consumer-AI systems on the platform including the AI-introductions matching engine and the AI-based user-approval system.
+- Converge Labs (stealth consumer-AI startup): co-founder & Head of AI. Shipped AI-driven user matching (3x faster), real-time sentiment moderation chatbot (-56% toxicity, +35% retention), AI video-generation platform (70% of editing automated, 5x content-production speedup), AI-powered voice-onboarding (+55% new-user retention).
+
+## Selected impact (quantified, defensible)
+
+- Blue River Technology: built a transformer that beat the production model by +6% mAP, selected as the new state of the art. Saved ~$46M in herbicide costs in Iowa fields alone.
+- Craftwork: combined Grounding DINO and Segment Anything for natural-language object detection and segmentation. Contributed to a $4M funding round and a Y Combinator launch, plus an additional $2M from an AR room-sizing feature.
+- Kryptonite: multi-camera person re-identification cut ~$1M of GPU cost. Self-supervised representation learning (SwAV, SimCLR) over a 50M-image Instagram dataset for a +4% retrieval gain.
+
+## Research and publications
+
+- Primary publication: Lokhmachev, N. "Radio Map Estimation with Deep Dual Path Autoencoders and Skip Connection Learning." IEEE, 31 October 2023. The paper introduces the Dual Path Autoencoder (separating environmental and signal information) and Skip Connection Autoencoders (increasing encoder-decoder information flow) for predicting radio power across a 2D area and frequency band. Relevant to fingerprint localization, user-cell association, MIMO power control, and UAV path planning. Code release (13 stars): https://github.com/nikitalokhmachev-ai/radio-map-estimation-public
+- Additional research: 8 conference papers published in the BMSTU scientific journal during undergraduate research at Bauman Moscow State Technical University, on topics including neural-network-based object detection, classification approaches for Kaggle problems, control-signal formation from frame streams, pattern recognition for mobile autonomous platforms, and virtual-camera modeling in MATLAB (regional and Russian national scientific and technical conferences).
+
+## Selected projects
+
+- Transformer-Based Brainwave Image Reconstruction (University of North Texas, Aug-Dec 2022). End-to-end brain-wave → image reconstruction using a vision transformer and a Parti-style decoder. M.S. thesis area.
+- Segformer Crop/Weed Image Segmentation (Blue River Technology, May-Jul 2022). Transformer-based segmentation that outperformed the production model and is a candidate for the new state of the art in production. Underpinned the +6% mAP / ~$46M herbicide savings result.
+- Knowledge Distillation for Crop/Weed Segmentation (Blue River Technology, Jul-Aug 2022). Trained a high-accuracy teacher to label unlabeled data, then fine-tuned the smaller production model on the combined set. Statistically significant accuracy lift.
+- Self-Supervised Representation Learning Research (Kryptonite, Sep-Dec 2020). SimCLR (Google) and SwAV (Facebook) over ResNet, ResNeXt, EfficientNet backbones for image retrieval and object detection.
+- Multicamera Person Re-Identification (Kryptonite, Mar-Aug 2021). Used intrinsic and extrinsic camera parameters to associate identities across views because subjects all wore the same clothes. Underpinned the ~$1M GPU cost reduction at Kryptonite.
+- Hybrid Classical/Quantum CNN + MCTS for Chess (University of North Texas, Jan-Apr 2022). Hybrid classical/quantum convolutional network paired with Monte Carlo Tree Search for chess move evaluation.
+- Humana Mays Healthcare Analytics Case Competition (University of North Texas, Sep-Dec 2021). Gradient-boosting model over ~400 features to predict COVID vaccination status for Humana's outreach targeting. Ranked 16th out of ~700 teams.
+- Satellite Position Prediction for IDAO 2020 (International Data Analysis Olympiad, https://idao.world/). Gradient boosting plus system-performance optimization. 2nd place in the online round.
+- Sex/Language Audio Classifier (Kryptonite, Aug-Sep 2020). End-to-end multi-label CNN over audio mel-spectrograms with two heads on a shared backbone: 6-way language classification (EN/RU/DE/FR/ES/AR) and binary speaker-sex classification.
+
+## Honors and awards
+
+- IEEE PIMRC 2023 Publication: Radio Map Estimation with Deep Dual Path Autoencoders and Skip Connection Learning.
+- Edmund S. Muskie Professional Fellowship, Cultural Vistas (May 2022). U.S. Department of State program for emerging Fulbright leaders.
+- Fulbright Foreign Student Scholarship, Institute of International Education (Aug 2021). About 4,000 scholars selected globally per year across 160+ countries.
+- 2nd place, International Data Analysis Olympiad (IDAO 2020, https://idao.world/) — online round, February 2020. Satellite position and velocity prediction.
+- Yandex "Я-профи" AI Student Olympiad, prizewinner (Moscow, January 2020).
+- Yandex "Я-профи" Big Data Student Olympiad, prizewinner (Moscow, January 2020).
+- Yandex IT Winter School "Тебе Решать!", 3rd place (Saint Petersburg, January 2020).
+- Rector's Scholarship, Bauman Moscow State Technical University — top 5% of program.
+
+## Thought leadership
+
+- Speaker, AI Safety México meetup, April 2026 (91 registered attendees, co-hosted with Janeth Valdivia and Angel Tenorio). Talk on data sovereignty for AI agents: who owns the context an agent runs in, where the data goes, and why the security layer around your AI tools should be independent of the model vendor. Connected the LATAM AI safety community to the Greywall sandbox work. Link: https://www.linkedin.com/feed/update/urn:li:activity:7451083120159854592/
+- Speaker, "Who Pressed Enter?" at AI CDMX (the AI Mexico City community). Talk on agentic AI, the accountability question behind autonomous systems, and what changes when humans stop being the ones pressing Enter. Video: https://www.youtube.com/watch?v=RCzJrMWFBZ4
+- Panelist, YPWACC AI Panel (Young Professionals of the Charlotte Chamber), 2023. Panel discussion on AI's impact on industries, workflow automation, the ethics of AI-generated content, and continuous learning across generations. Link: https://www.linkedin.com/feed/update/urn:li:activity:7167612797458051072/
+
+## Education
+
+- M.S., Artificial Intelligence, University of North Texas, 2021-2023. GPA 4.0/4.0. Fulbright Foreign Student Scholarship (IIE, 2021). Edmund S. Muskie Professional Fellowship (Cultural Vistas, 2022).
+- B.S., Computer Science / Autonomous Systems, Bauman Moscow State Technical University, 2016-2020. GPA 3.94/4.0. Rector's Scholarship (top 5%). 2nd place at the International Data Analysis Olympiad (IDAO) 2020.
+
+## Tech stack
+
+- Languages: Python, TypeScript, Go, SQL, Bash
+- AI / ML: PyTorch, TensorFlow, Keras, Hugging Face, scikit-learn, OpenCV
+- LLM tooling: LangChain, LangGraph, LangSmith, MCP, OpenRouter, RAG, vector search
+- Multi-agent orchestration, agentic AI pipelines, embedding-based matching, applicant-scoring classification
+- Frontend: React, AG Grid, HTMX, Tauri, Service Workers, OPFS
+- Backend: Django, FastAPI, Node.js, PostgreSQL, Baserow, Caddy
+- Security: Linux Landlock + seccomp, macOS sandboxing, SOCKS5, OAuth, 1Password
+- Infra: Docker, Podman, Vercel, OCI registry, GitHub Actions, Homebrew
+
+## Availability
+
+Open to senior IC, staff, founding-engineer, and product-engineering-lead roles in AI/ML, multi-agent systems, agentic AI, computer vision, developer tools, and security-focused AI infra.
+
+## Contact
+
+- Email: lokhmachevnikita@gmail.com
+- Phone: +1 (940) 594-3268
