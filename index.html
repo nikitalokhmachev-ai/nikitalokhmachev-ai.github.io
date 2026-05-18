@@ -43,7 +43,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Hanken+Grotesk:wght@300;400;500;600;700&amp;display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Hanken+Grotesk:wght@300;400;500;600;700&amp;display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Hanken+Grotesk:wght@300;400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" />
 
     <!-- Tailwind via CDN. For production, swap to a pre-built CSS bundle. -->
     <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
@@ -100,6 +100,17 @@
     <style>
       html, body { overflow-x: hidden; max-width: 100vw; }
       body { background: #131313; color: #e5e2e1; font-family: 'Hanken Grotesk', system-ui, sans-serif; }
+
+      /* Use Instrument Serif Italic for the italic emphasis spans in headlines —
+         Syne has no real italic, so the browser was synthesizing a slanted version
+         that looked weak next to the bold sans display. */
+      h1 .italic, h2 .italic, h3 .italic, .font-display .italic {
+        font-family: 'Instrument Serif', 'Georgia', serif;
+        font-weight: 400;
+        font-size: 1.08em;
+        letter-spacing: -0.015em;
+        vertical-align: baseline;
+      }
       ::selection { background: #bfc2ff; color: #0400ac; }
       *:focus-visible { outline: 2px solid #c3f400; outline-offset: 4px; border-radius: 2px; }
 
