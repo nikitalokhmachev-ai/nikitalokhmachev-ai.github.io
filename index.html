@@ -955,15 +955,18 @@
     <!-- ===== FOOTER ===== -->
     <footer class="bg-surface-container-lowest border-t-2 border-primary px-margin-mobile md:px-margin-desktop py-12 mt-12">
         <div class="flex flex-col md:flex-row justify-between gap-8 items-start md:items-end">
-            <div class="flex items-center gap-4">
-                <svg viewBox="0 0 100 100" class="w-12 h-12 shrink-0" aria-hidden="true">
+            <div class="flex items-center gap-4 min-w-0">
+                <svg viewBox="0 0 100 100" class="w-10 h-10 md:w-12 md:h-12 shrink-0" aria-hidden="true">
                     <path d="M 50 15 A 35 35 0 0 0 15 50 L 50 50 Z" fill="#BFC2FF" transform="translate(0, -2)" />
                     <path d="M 50 85 A 35 35 0 0 0 85 50 L 50 50 Z" fill="#BFC2FF" transform="translate(0, 2)" />
                     <rect x="75" y="15" width="8" height="8" fill="#BFC2FF" />
                     <line x1="50" y1="10" x2="50" y2="90" stroke="#e5e2e1" stroke-width="2" />
                 </svg>
-                <div>
-                    <p class="font-display font-extrabold text-3xl text-primary uppercase leading-none">NIKITA<span class="text-secondary">.</span>LOKHMACHEV</p>
+                <div class="min-w-0">
+                    <p class="font-display font-extrabold text-2xl md:text-3xl text-primary uppercase leading-none truncate">
+                        <span class="md:hidden">N<span class="text-secondary">.</span>L</span>
+                        <span class="hidden md:inline">NIKITA<span class="text-secondary">.</span>LOKHMACHEV</span>
+                    </p>
                     <p class="font-mono text-caps uppercase text-outline mt-3">© 2026</p>
                 </div>
             </div>
