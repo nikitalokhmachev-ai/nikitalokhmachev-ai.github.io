@@ -98,6 +98,7 @@
     </script>
 
     <style>
+      html, body { overflow-x: hidden; max-width: 100vw; }
       body { background: #131313; color: #e5e2e1; font-family: 'Hanken Grotesk', system-ui, sans-serif; }
       ::selection { background: #bfc2ff; color: #0400ac; }
       *:focus-visible { outline: 2px solid #c3f400; outline-offset: 4px; border-radius: 2px; }
@@ -143,8 +144,17 @@
         pointer-events: none;
         z-index: 0;
         overflow: hidden;
+        contain: strict;
+        max-width: 100vw;
         mask-image: radial-gradient(ellipse at center, #000 30%, transparent 90%);
         -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 90%);
+      }
+      /* On phones, shrink and reposition the biggest shapes so they don't crowd the content */
+      @media (max-width: 767px) {
+        .ambient-shapes .s1 { width: 220px; height: 220px; left: -12%; }
+        .ambient-shapes .s3 { width: 140px; height: 140px; right: -10%; }
+        .ambient-shapes .s4 { width: 260px; height: 260px; left: -8%; }
+        .ambient-shapes .s7 { width: 180px; height: 180px; }
       }
       .ambient-shapes .shape {
         position: absolute;
@@ -360,15 +370,16 @@
     <!-- ===== TopNav ===== -->
     <header class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-surface/70 border-b border-outline-variant/40">
         <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full">
-            <a href="#top" class="flex items-center gap-3 leading-none">
-                <svg viewBox="0 0 100 100" class="w-9 h-9 md:w-10 md:h-10 shrink-0" aria-hidden="true">
+            <a href="#top" class="flex items-center gap-2 md:gap-3 leading-none min-w-0">
+                <svg viewBox="0 0 100 100" class="w-8 h-8 md:w-10 md:h-10 shrink-0" aria-hidden="true">
                     <path d="M 50 15 A 35 35 0 0 0 15 50 L 50 50 Z" fill="#BFC2FF" transform="translate(0, -2)" />
                     <path d="M 50 85 A 35 35 0 0 0 85 50 L 50 50 Z" fill="#BFC2FF" transform="translate(0, 2)" />
                     <rect x="75" y="15" width="8" height="8" fill="#BFC2FF" />
                     <line x1="50" y1="10" x2="50" y2="90" stroke="#e5e2e1" stroke-width="2" />
                 </svg>
-                <span class="font-display text-2xl md:text-3xl font-extrabold uppercase tracking-tighter text-primary">
-                    NIKITA<span class="text-secondary">.</span>LOKHMACHEV
+                <span class="font-display font-extrabold uppercase tracking-tighter text-primary truncate text-xl md:text-3xl">
+                    <span class="md:hidden">N<span class="text-secondary">.</span>L</span>
+                    <span class="hidden md:inline">NIKITA<span class="text-secondary">.</span>LOKHMACHEV</span>
                 </span>
             </a>
             <nav aria-label="Primary" class="hidden md:flex gap-6 items-center font-mono text-caps uppercase">
