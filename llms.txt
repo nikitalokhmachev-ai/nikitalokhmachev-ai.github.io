@@ -15,7 +15,7 @@
 - [Greywall](https://github.com/GreyhavenHQ/greywall): 184-star open-source container-free, deny-by-default sandbox for AI coding agents. Kernel-enforced filesystem, network, and syscall isolation for Linux (Landlock + seccomp) and macOS. Apache-2.0. Nik is an open-source contributor.
 - [Packrat](https://github.com/Monadical-SAS/argo): open-source `.wacz` web-archive viewer with peer-to-peer WebTorrent loading. Nik drove the WebTorrent integration, the in-archive search experience, the magnet-link share UI, and OPFS-backed browser-local storage.
 - [GreyProxy](https://github.com/GreyhavenHQ/greyproxy): SOCKS5 + DNS proxy companion to Greywall with ~4 ms per-request overhead. 35 stars.
-- [Clockout](https://clockoutapp.com/): live AI-powered local professional-networking app with 4,500+ communities. As a consulting engagement, Nik built consumer-AI systems on the platform including the AI-introductions matching engine and the AI-based user-approval system.
+- [Clockout](https://apps.apple.com/us/app/clockout-network-socially/id1564725856): live AI-powered local professional-networking app with 4,500+ communities. As a consulting engagement, Nik built consumer-AI systems on the platform including the AI-introductions matching engine and the AI-based user-approval system.
 - Converge Labs (stealth consumer-AI startup): co-founder & Head of AI. Shipped AI-driven user matching (3x faster), real-time sentiment moderation chatbot (-56% toxicity, +35% retention), AI video-generation platform (70% of editing automated, 5x content-production speedup), AI-powered voice-onboarding (+55% new-user retention).
 
 ## Selected impact (quantified, defensible)
